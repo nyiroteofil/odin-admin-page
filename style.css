@@ -1,0 +1,301 @@
+:root {
+    --dark-primary-bg: #0a4669;
+    --dark-secondary-bg: #0f6b50;
+    --dark-third-bg: rgb(18, 54, 88);
+    --dark-fourth-bg: rgb(59, 71, 90);
+    --dark-primary-font: #5eead4;
+    --dark-secondary-font: #67e8f9;
+
+    --light-primary-bg: #e5e7eb;
+    --light-secondary-bg: #a4d0e2;
+    --light-third-bg: rgb(97, 199, 168);
+    --light-fourth-bg: rgb(140, 226, 183);
+    --light-primary-font: #083752;
+    --light-secodnary-font: #115e59;
+}
+
+.logo {
+    height: 70px;
+    border-radius: 20px;
+}
+
+.logo-container.light {
+    color: var(--light-secodnary-font);
+    position: relative;
+    font-size: 20px;
+    right: 10px;
+}
+
+.logo-container.dark {
+    color: var(--dark-secodnary-font);
+    position: relative;
+    font-size: 20px;
+    right: 10px;
+}
+
+.icon {
+    width: 20px;
+    margin-right: 10px;   
+}
+
+.button-group-1 > div {
+    font-display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.button-group-1 > div > p {
+    display: inline-block;
+    position: relative;
+    top: -7px;
+    margin: 0;
+
+}
+
+.button-group-2 > div > p {
+    display: inline-block;
+    position: relative;
+    top: -7px;
+    margin: 0;
+}
+
+body {
+    display: grid;
+    grid-template: 1fr / 130px repeat(4, 1fr);
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.side-bar {
+    height: 100vh;
+    display: grid;
+    grid-template: repeat(7, 1fr) / 135px;
+}
+
+.side-bar.light {
+    background-color: var(--light-primary-bg);
+    color: var(--light-primary-font);
+}
+
+.side-bar.dark {
+    background-color: var(--dark-primary-bg);
+    color: var(--dark-primary-font)
+}
+
+.logo-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex: 1 3 0%;
+    width: 150px;
+    gap: 5px;
+    padding: 5px;
+    margin: 0 auto;
+}
+
+.button-group-1 {
+    width: 100%;
+    grid-row-start: 2;
+    grid-row-end: 7;
+    display: flex;
+    flex-direction: column;
+    gap: 15%;
+    align-items: center;
+    justify-content: center;
+}
+
+.button-group-2 {
+    width: 100%;
+    grid-row-start: 7;
+    grid-row-end: 8;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px 20% 0  0;
+}
+
+.button-group-2.light {
+    border-top: var(--light-secodnary-font) solid 3px;
+    background-color: var(--light-third-bg);
+}
+
+.button-group-2.dark {
+    border-top: var(--dark-secondary-font) solid 3px;
+    background-color: var(--dark-third-bg);
+}
+
+.feed {
+    height: 100vh;
+    grid-column-start: 2;
+    grid-column-end: 6;
+    display: grid;
+    grid-template: 50px repeat(7, 1fr) / repeat(5, 1fr) 200px;
+}
+
+.top-bar {
+    width: 100%;
+    grid-column-start: 1;
+    grid-column-end: 7;
+    display: grid;
+    grid-template: 100% / repeat(6, 1fr);
+}
+
+.search-container {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    padding-left: 15px;
+}
+
+.search-bar.light {
+    background: var(--light-primary-bg);
+    color: var(--light-secodnary-font);
+    border-radius: 5px;
+    border-bottom: var(--light-third-bg) 2px solid;
+    height: 20px;
+}
+
+.theme {
+    grid-column-start: 6;
+    grid-column-end: 7;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+.theme-icon {
+    width: 30px;
+}
+
+.top-bar.light {
+    background-color: var(--light-secondary-bg);
+    color: var(--light-primary-font);
+    border-bottom: var(--light-primary-font) 2px solid;
+}
+
+.top-bar.dark {
+    background-color: var(--dark-secondary-bg);
+    color: var(--dark-primary-font);
+    border-bottom: var(--dark-primary-font) 2px solid;
+}
+
+.news {
+    grid-row-start: 2;
+    grid-row-end: 15;
+    grid-column-start: 6;
+}
+
+.news.light {
+    background-color: var(--light-secondary-bg);
+    color: var(--light-primary-font);
+    border-left: var(--light-primary-font) 2px solid;
+}
+
+.news.dark {
+    background-color: var(--dark-secondary-bg);
+    color: var(--dark-primary-font);
+    border-left: var(--dark-primary-font) 2px solid;
+}
+
+.feed-element {
+    height: 150px;
+    width: clamp(200px, 30%, 240px);
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:space-evenly;
+    overflow: scroll;
+    padding: 12px; 
+
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.feed-element.light {
+    background-color: var(--light-primary-bg);
+    border-bottom: var(--light-third-bg) 4px solid;
+    border-left: var(--light-third-bg) 7px solid;
+    color: var(--light-primary-font);
+}
+
+.feed-element.dark {
+    background-color: var(--dark-primary-bg);
+    border-bottom: var(--dark-third-bg) 4px solid;
+    border-left: var(--dark-third-bg) 7px solid;
+    color: var(--dark-primary-font);
+}
+
+.feed-element.a {
+    width: 400px;
+}
+
+.feed-element.c {
+    width: 350px;
+}
+
+.feed-element.f {
+    width: 40%
+}
+
+.title.light {
+    font-size: 25px;
+    background-color: var(--light-secondary-bg);
+    color: var(--light-secodnary-font);
+    display: inline;
+    border-radius: 5px;
+}
+
+.title.dark {
+    font-size: 25px;
+    background-color: var(--dark-secondary-bg);
+    color: var(--dark-secodnary-font);
+    display: inline-block;
+    border-radius: 5px;
+}
+
+.feed-body {
+    grid-row-start: 2;
+    grid-row-end: 8;
+    grid-column-start: 1;
+    grid-column-end: 6;
+    display: grid;
+    grid-template: repeat(6, 1fr) / 1fr;
+
+    overflow: scroll;
+    grid-row-start: 2;
+    grid-row-end: 9;
+    display: flex;
+    direction: row;
+    align-items: center;
+    justify-content: left;
+    flex-wrap: wrap;
+    gap: 5%;
+    padding: 40px;
+
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.feed-body.light {
+    background-color: var(--light-fourth-bg);
+}
+
+.feed-body.dark {
+    background-color: var(--dark-fourth-bg);
+}
+
+.feed-body::-webkit-scrollbar {
+    display: none;
+}
+
+.feed-element::-webkit-scrollbar {
+    display: none;
+}
