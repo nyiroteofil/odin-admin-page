@@ -1,0 +1,58 @@
+:root {
+    --dark-primary-bg: #0a4669;
+    --dark-secondary-bg: #0f6b50;
+    --dark-third-bg: rgb(18, 54, 88);
+    --dark-fourth-bg: rgb(59, 71, 90);
+    --dark-primary-font: #5eead4;
+    --dark-secondary-font: #2c8d3c;
+
+    --light-primary-bg: #e5e7eb;
+    --light-secondary-bg: #a4d0e2;
+    --light-third-bg: rgb(97, 199, 168);
+    --light-fourth-bg: rgb(140, 226, 183);
+    --light-primary-font: #083752;
+    --light-secodnary-font: #115e59;
+}
+
+.side-bar.light > .button-group-1 > div:hover {
+    border-right: var(--light-secodnary-font) 2px solid;
+    border-bottom: var(--light-secodnary-font) 2px solid;
+    border-top: var(--light-secodnary-font) 2px solid;;
+    border-radius: 0 10px 10px 0;
+    background-color: var(--light-secondary-bg);
+    z-index: 1;
+    transform: relative;
+    right: -1px;
+}
+
+.side-bar.dark > .button-group-1 > div:hover {
+    border-right: var(--dark-secondary-font) 2px solid;
+    border-bottom: var(--dark-secondary-font) 2px solid;
+    border-top: var(--dark-secondary-font) 2px solid;;
+    border-radius: 0 10px 10px 0;
+    background-color: var(--dark-secondary-bg);
+    z-index: 1;
+    position: relative;
+    right: -1px;
+}
+
+.theme:hover {
+    animation: pop 0.4s ease-in-out normal;
+}
+@keyframes pop {
+    0% {
+        transform: translateY(0);
+    }
+
+    25% {
+        transform: translateY(-3px);
+    }
+
+    75% {
+        transform: translateY(2px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
