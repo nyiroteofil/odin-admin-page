@@ -21,7 +21,7 @@
     border-radius: 0 10px 10px 0;
     background-color: var(--light-secondary-bg);
     z-index: 1;
-    transform: relative;
+    position: relative;
     right: -1px;
 }
 
@@ -37,9 +37,30 @@
 }
 
 .theme:hover {
-    animation: pop 0.4s ease-in-out normal;
+    animation: boing 0.4s ease-in-out normal;
 }
-@keyframes pop {
+
+.feed-element {
+    transition: transform 0.3s linear;
+}
+
+.feed-element:hover {
+    transform: translateY(-5px);
+}
+
+.exit {
+    transition: transform 0.3s linear;
+}
+
+.exit:hover {
+    transform: translateY(-3px);
+}
+
+.exit:active {
+    transform: translateY(3px);
+}
+
+@keyframes boing {
     0% {
         transform: translateY(0);
     }
