@@ -1,18 +1,4 @@
-:root {
-    --dark-primary-bg: #0a4669;
-    --dark-secondary-bg: #0f6b50;
-    --dark-third-bg: rgb(18, 54, 88);
-    --dark-fourth-bg: rgb(59, 71, 90);
-    --dark-primary-font: #5eead4;
-    --dark-secondary-font: #2c8d3c;
 
-    --light-primary-bg: #e5e7eb;
-    --light-secondary-bg: #a4d0e2;
-    --light-third-bg: rgb(97, 199, 168);
-    --light-fourth-bg: rgb(140, 226, 183);
-    --light-primary-font: #083752;
-    --light-secodnary-font: #115e59;
-}
 
 .side-bar.light > .button-group-1 > div:hover {
     border-right: var(--light-secodnary-font) 2px solid;
@@ -41,23 +27,21 @@
 }
 
 .feed-element {
-    transition: transform 0.3s linear;
+    transition: transform 0.35s linear;
 }
 
 .feed-element:hover {
-    transform: translateY(-5px);
+    transform: translateY(-7px);
 }
 
 .exit {
-    transition: transform 0.3s linear;
+    transition: transform 0.5s linear;
+    transition: background-color 1s linear;
 }
 
 .exit:hover {
-    transform: translateY(-3px);
-}
-
-.exit:active {
-    transform: translateY(3px);
+    transform: translateY(-2px);
+    background-color: rgb(185, 74, 46);
 }
 
 @keyframes boing {

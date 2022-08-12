@@ -57,7 +57,30 @@ buttons.forEach(e => {
    
 });      
 
+/**button for mobile news opener */
+
+const newsButton = document.querySelector('.mobileNewsOpen');
+const newsTab = document.querySelector('.news')
+
+let newsButtonClicked = false;
+
+newsButton.addEventListener('click', () => {
 
 
+    if (newsButtonClicked === false) {
 
+        newsTab.style.gridColumnStart = "4";
+
+        newsButtonClicked = true;
+
+
+    } else {
+
+        newsTab.style.gridColumnStart = '20';
+
+        newsButtonClicked = false;
+
+    }
+
+});
    

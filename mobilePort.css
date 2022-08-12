@@ -1,0 +1,233 @@
+@media only screen and (max-width: 500px) {
+    body {
+        grid-template: 1fr / 80px repeat(4, 1fr);
+        overflow: hidden;
+    }
+
+    .side-bar {
+        grid-template: repeat(7, 1fr) / 80px;
+    }
+
+    .logo {
+        width: 50px;
+        height: 50px;
+    }
+
+    .logo-container {
+        position: relative;
+        left: -35px;
+        font-size: 5px;
+        margin: 0 auto;
+    }
+
+    .logo-container > span {
+        width: 30px;
+        font-size: 18px;;
+        position: inherit;
+        right: 23px;
+        text-align: center;
+    }
+
+    .feed {
+        grid-template: 50px repeat(7, 1fr) / repeat(19, 1fr) 30px ;
+    }
+
+    .feed-body {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-items: center;
+        justify-content: space-between;
+        overflow: scroll;
+        grid-column-start: 1;
+        grid-column-end: 20;
+
+    }
+
+    .feed-element {
+        height: 300px;
+        width: 80%;
+        padding-top: 130px
+    }
+
+    .feed-element.b, .feed-element.d {
+        width: 40vw;
+    }
+    
+    .feed-element.a {
+        width: 100%;
+    }
+
+    .feed-element.f, .feed-element.c {
+        width: 200px;
+    }
+
+    .button-group-2 > div {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        font-size: 13px;
+        gap: 4px;
+    }
+
+    .button-group-2 > div > img {
+        position: relative;
+        right: -5px;
+    }
+
+    .news {
+        grid-column-start: 20;
+        grid-column-end: 21;
+        overflow: hidden;
+        z-index: 2;
+        transition: discrate 2s ease-in-out;
+    }
+
+    .news-elements > h1 {
+        letter-spacing: 1px;
+    }
+
+
+    .top-bar {
+        grid-column-start: 1;
+        grid-column-end: 21;
+    }
+
+    .mobileNewsOpen {
+        display: flex;
+        grid-column-start: 4;
+        grid-column-end: 9;
+        align-items: center;
+        justify-content: center;
+
+        font-size: 25px;
+        font-family: 'Times New Roman', Times, serif;
+    }
+
+    .search-bar {
+        width: 80px;
+    }
+
+    .news-icon {
+        width: 60px
+    }
+}
+
+@media only screen and (max-height: 400px) {
+
+    body {
+        grid-template: 1fr / 80px repeat(4, 1fr);
+        overflow: hidden;
+    }
+
+    .side-bar {
+        grid-template: repeat(7, 1fr) / 80px;
+    }
+
+    .logo {
+        width: 50px;
+        height: 50px;
+    }
+
+    .logo-container {
+        position: relative;
+        left: -35px;
+        font-size: 5px;
+        margin: 0 auto;
+    }
+
+    .logo-container > span {
+        width: 30px;
+        font-size: 18px;;
+        position: inherit;
+        right: 23px;
+        text-align: center;
+    }
+
+    .feed {
+        grid-template: 50px repeat(7, 1fr) / repeat(19, 1fr) 30px ;
+    }
+
+    .feed-body {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-items: center;
+        justify-content: space-between;
+        overflow: scroll;
+        grid-column-start: 1;
+        grid-column-end: 20;
+
+    }
+
+    .feed-element {
+        height: 300px;
+        width: 80%;
+        padding-top: 130px
+    }
+
+    .feed-element.b, .feed-element.d {
+        width: 40vw;
+    }
+    
+    .feed-element.a {
+        width: 100%;
+    }
+
+    .feed-element.f, .feed-element.c {
+        width: 200px;
+    }
+
+    .button-group-2 > div {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        font-size: 13px;
+        gap: 4px;
+    }
+
+    .button-group-2 > div > img {
+        position: relative;
+        right: -5px;
+    }
+
+    .news {
+        grid-column-start: 20;
+        grid-column-end: 21;
+        overflow: hidden;
+        z-index: 2;
+        transition: discrate 2s ease-in-out;
+    }
+
+    .news-elements > h1 {
+        letter-spacing: 1px;
+    }
+
+
+    .top-bar {
+        grid-column-start: 1;
+        grid-column-end: 21;
+    }
+
+    .mobileNewsOpen {
+        display: flex;
+        grid-column-start: 4;
+        grid-column-end: 9;
+        align-items: center;
+        justify-content: center;
+
+        font-size: 25px;
+        font-family: 'Times New Roman', Times, serif;
+    }
+
+    .search-bar {
+        width: 80px;
+    }
+
+    .news-icon {
+        width: 60px
+    }
+    
+}
