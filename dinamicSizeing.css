@@ -39,12 +39,17 @@
         grid-template: 50px repeat(7, 1fr) / repeat(19, 1fr) 50px ;
     }
 
+    .feed-element {
+        height: 90%;
+    }
+
     .feed-body {
         display: grid;
         grid-template: repeat(6, 400px) / 100%;
         grid-column-start: 1;
         grid-column-end: 20;
         overflow: scroll;
+        padding: 10px;
     }
 
     .button-group-2 > div {
