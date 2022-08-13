@@ -1,21 +1,26 @@
 :root {
-    --dark-primary-bg: #022f69;
-    --dark-secondary-bg: #402fa1;
+    --dark-primary-bg: #2b3746;
+    --dark-secondary-bg: #474861;
     --dark-third-bg: rgb(18, 54, 88);
     --dark-fourth-bg: rgb(59, 71, 90);
-    --dark-primary-font: #1ea03a;
-    --dark-secondary-font: #2c8d3c;
+    --dark-primary-font: #97a01e;
+    --dark-secondary-font: #db9b71;
     --dark-initial-font: rgb(68, 116, 170);
 
-    --light-primary-bg: #e2cc8f;
+    --light-primary-bg: #dad8c8;
     --light-secondary-bg: #ebac71;
-    --light-third-bg: rgb(224, 103, 47);
-    --light-fourth-bg: rgb(196, 131, 71);
+    --light-third-bg: rgb(223, 174, 128);
+    --light-fourth-bg: rgb(215, 223, 147);
     --light-primary-font: #751707;
     --light-secodnary-font: #272e47;
     --light-initial-font: rgb(226, 238, 116);
 
     scroll-behavior: smooth;
+}
+
+* {
+    transition: background-color 0.5s linear, border-left 0.5s linear,  color 0.3s linear;
+  
 }
 
 .logo {
@@ -48,6 +53,7 @@
     height: 100%;
     align-items: center;
     justify-content: center;
+    transition: none;
 }
 
 .button-group-2 > div > p {
@@ -128,20 +134,28 @@ body {
     grid-column-start: 2;
     grid-column-end: 6;
     display: grid;
-    grid-template: 50px repeat(7, 1fr) / repeat(5, 1fr) 200px;
+    grid-template: 50px repeat(7, 1fr) / repeat(19, 1fr) 50px;
+    overflow: scroll;
+
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.feed::-webkit-scrollbar {
+    display: none;
 }
 
 .top-bar {
     width: 100%;
     grid-column-start: 1;
-    grid-column-end: 7;
+    grid-column-end: 21;
     display: grid;
     grid-template: 100% / repeat(10, 1fr);
 }
 
 .search-container {
     grid-column-start: 1;
-    grid-column-end: 3;
+    grid-column-end: 4;
     display: flex;
     align-items: center;
     justify-content: left;
@@ -165,7 +179,7 @@ body {
 }
 
 .theme {
-    grid-column-start: 9;
+    grid-column-start: 7;
     grid-column-end: 11;
     display: flex;
     align-items: center;
@@ -178,21 +192,22 @@ body {
 }
 
 .top-bar.light {
-    background-color: var(--light-secondary-bg);
+    background-color: var(--light-primary-bg);
     color: var(--light-primary-font);
     border-bottom: var(--light-primary-font) 2px solid;
 }
 
 .top-bar.dark {
-    background-color: var(--dark-secondary-bg);
+    background-color: var(--dark-primary-bg);
     color: var(--dark-primary-font);
     border-bottom: var(--dark-primary-font) 2px solid;
 }
 
 .news {
     grid-row-start: 2;
-    grid-row-end: 15;
-    grid-column-start: 6;
+    grid-row-end: 9;
+    grid-column-start: 20;
+    grid-column-end: 21;
     display: grid;
     grid-template: repeat(5, 1fr) / 1fr;
     grid-template-areas: 
@@ -244,7 +259,6 @@ color: var(--light-secodnary-font);
 }
 
 .news-elements {
-    margin: 0 4px 0 4px;
     border-radius: 30px;
 }
 
@@ -311,8 +325,8 @@ color: var(--light-secodnary-font);
 }
 
 .feed-element {
-    height: clamp(100px, 40vh, 30%);
-    width: clamp(200px, 40vw, 40%);
+    height: 100%;
+    width: clamp(200px, 1fr, 400px);
     border-radius: 30px;
     display: flex;
     flex-direction: column;
@@ -339,13 +353,6 @@ color: var(--light-secodnary-font);
     color: var(--dark-primary-font);
 }
 
-.feed-element.a {
-    width: 400px;
-}
-
-.feed-element.c {
-    width: 350px;
-}
 
 .feed-element.b {
     overflow: hidden;
@@ -357,10 +364,6 @@ color: var(--light-secodnary-font);
     overflow: hidden;
     background-image: url(./images/mohammad-rahmani-N5bT5RctFZ8-unsplash.jpg);
     background-size: cover;
-}
-
-.feed-element.f {
-    width: 40%;
 }
 
 .title.light {
@@ -380,22 +383,16 @@ color: var(--light-secodnary-font);
 }
 
 .feed-body {
+    overflow: scroll;
+    height: calc(100vh - 50px);
     grid-row-start: 2;
     grid-row-end: 8;
     grid-column-start: 1;
-    grid-column-end: 6;
+    grid-column-end: 20;
     display: grid;
-    grid-template: repeat(6, 1fr) / 1fr;
+    grid-template: repeat(2, 1fr) / repeat(3, 1fr);
+    gap: 20px;
 
-    overflow: scroll;
-    grid-row-start: 2;
-    grid-row-end: 9;
-    display: flex;
-    direction: row;
-    align-items: center;
-    justify-content: left;
-    flex-wrap: wrap;
-    gap: 5%;
     padding: 40px;
 
     -ms-overflow-style: none;
@@ -452,7 +449,19 @@ color: var(--light-secodnary-font);
 }
 
 .mobileNewsOpen {
-    display: none;
+    display: flex;
+    grid-column-start: 5;
+    grid-column-end: 7;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+
+    font-size: 25px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.news-icon {
+    width: 60px;
 }
 
 .feed-body::-webkit-scrollbar {

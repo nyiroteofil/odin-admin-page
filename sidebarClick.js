@@ -69,7 +69,7 @@ newsButton.addEventListener('click', () => {
 
     if (newsButtonClicked === false) {
 
-        newsTab.style.gridColumnStart = "4";
+        newsTab.style.gridColumnStart = "10";
 
         newsButtonClicked = true;
 

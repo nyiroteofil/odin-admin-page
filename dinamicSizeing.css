@@ -1,4 +1,11 @@
-@media only screen and (max-width: 500px) {
+@media screen and (max-width: 870px) {
+    
+    .feed-body {
+        grid-template: repeat(3, 1fr) / repeat(2, 1fr);
+    }
+}
+
+@media only screen and (max-width: 550px) {
     body {
         grid-template: 1fr / 80px repeat(4, 1fr);
         overflow: hidden;
@@ -29,37 +36,15 @@
     }
 
     .feed {
-        grid-template: 50px repeat(7, 1fr) / repeat(19, 1fr) 30px ;
+        grid-template: 50px repeat(7, 1fr) / repeat(19, 1fr) 50px ;
     }
 
     .feed-body {
-        display: flex;
-        flex-direction: column;
-        flex-wrap: nowrap;
-        align-items: center;
-        justify-content: space-between;
-        overflow: scroll;
+        display: grid;
+        grid-template: repeat(6, 400px) / 100%;
         grid-column-start: 1;
         grid-column-end: 20;
-
-    }
-
-    .feed-element {
-        height: 300px;
-        width: 80%;
-        padding-top: 130px
-    }
-
-    .feed-element.b, .feed-element.d {
-        width: 40vw;
-    }
-    
-    .feed-element.a {
-        width: 100%;
-    }
-
-    .feed-element.f, .feed-element.c {
-        width: 200px;
+        overflow: scroll;
     }
 
     .button-group-2 > div {
@@ -97,7 +82,7 @@
     .mobileNewsOpen {
         display: flex;
         grid-column-start: 4;
-        grid-column-end: 9;
+        grid-column-end: 7;
         align-items: center;
         justify-content: center;
 
@@ -114,7 +99,7 @@
     }
 }
 
-@media only screen and (max-height: 400px) {
+@media screen and (max-height: 400px) {
 
     body {
         grid-template: 1fr / 80px repeat(4, 1fr);
@@ -146,37 +131,16 @@
     }
 
     .feed {
-        grid-template: 50px repeat(7, 1fr) / repeat(19, 1fr) 30px ;
+        grid-template: 50px repeat(7, 1fr) / repeat(19, 1fr) 50px ;
     }
 
     .feed-body {
-        display: flex;
-        flex-direction: column;
-        flex-wrap: nowrap;
-        align-items: center;
-        justify-content: space-between;
-        overflow: scroll;
+        display: grid;
+        grid-template: repeat(6, 1fr) / 1fr;
         grid-column-start: 1;
         grid-column-end: 20;
-
-    }
-
-    .feed-element {
-        height: 300px;
-        width: 80%;
-        padding-top: 130px
-    }
-
-    .feed-element.b, .feed-element.d {
-        width: 40vw;
-    }
-    
-    .feed-element.a {
-        width: 100%;
-    }
-
-    .feed-element.f, .feed-element.c {
-        width: 200px;
+        overflow: scroll;
+        gap: 20px;
     }
 
     .button-group-2 > div {
@@ -207,19 +171,8 @@
 
 
     .top-bar {
-        grid-column-start: 1;
+        grid-column-start: 2;
         grid-column-end: 21;
-    }
-
-    .mobileNewsOpen {
-        display: flex;
-        grid-column-start: 4;
-        grid-column-end: 9;
-        align-items: center;
-        justify-content: center;
-
-        font-size: 25px;
-        font-family: 'Times New Roman', Times, serif;
     }
 
     .search-bar {
